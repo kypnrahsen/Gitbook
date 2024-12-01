@@ -211,7 +211,94 @@ In the above example, since the elements inside **my\_tuple** are lists, we can 
 
 Tuples are immutable data structures in Python, so once created, you cannot change their contents. If you need to use a data structure whose content needs to be changed, it would be more appropriate to use a list.
 
+### Tuple Methods
 
+1. **count():**&#x52;eturns the number of times a specified value appears in the tuple.
+
+```
+my_tuple = (1, 2, 2, 3, 2, 4)
+count_2 = my_tuple.count(2)
+# count_2: 3
+```
+
+2. **index():**&#x52;eturns the index of the specified element in the tuple.
+
+```
+my_tuple = (10, 20, 30, 20, 40)
+index_20 = my_tuple.index(20)
+# index_20: 1
+```
+
+3. **len()**: Returns the number of elements in the tuple.
+
+```
+my_tuple = (1, 2, 3, 4, 5)
+length = len(my_tuple)
+# length: 5
+```
+
+4. **The + operator:** Returns a tuple containing all the elements of the first and the second tuple object.
+
+```
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+combined_tuple = tuple1 + tuple2
+# combined_tuple: (1, 2, 3, 4, 5, 6)
+```
+
+5. **The \* operator:** Concatenates multiple copies of the same tuple.
+
+```
+my_tuple = (1, 2, 3)
+multiplied_tuple = my_tuple * 3
+# multiplied_tuple: (1, 2, 3, 1, 2, 3, 1, 2, 3)
+```
+
+6. **The&#x20;**_**in**_**&#x20;operator:** We use the ‘in’ operator to check if the object is present in the tuple. The ‘in’ operator returns “True” if a sequence with the specified value is present in the object and “False” if it is not present.
+
+```
+my_tuple = (10, 20, 30)
+contains_20 = 20 in my_tuple
+# contains_20: True
+```
+
+7. **The&#x20;**_**not in**_**&#x20;operator:** Returns `True` if the target value is _not_ present in a given collection of values. Otherwise, it returns `False`.
+
+```
+my_tuple = (10, 20, 30)
+contains_40 = 40 not in my_tuple
+# contains_40: True
+```
+
+### How to delete a tuple?
+
+In Python it is possible to delete a tuple with the del key. However, remember that the del switch deletes the reference to the object and removes it from memory, but does not delete the data itself. Therefore, the data in the tuple may still exist in memory, but access to the tuple is lost.
+
+Here's an example of deleting a tuple with the del key:
+
+```
+my_tuple = ('p', 'r', 'o', 'g', 'r', 'a', 'm', 'i', 'z')
+
+# can't delete items
+# TypeError: 'tuple' object doesn't support item deletion
+# del my_tuple[3]
+
+# Can delete an entire tuple
+del my_tuple
+
+# NameError: name 'my_tuple' is not defined
+print(my_tuple)
+
+```
+
+### How can we create a loop (iterating) with a tuple?
+
+```
+my_tuple = (10, 20, 30, 40, 50)
+
+for element in my_tuple:
+    print(element)
+```
 
 \
 
