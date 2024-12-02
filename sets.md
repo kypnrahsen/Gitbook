@@ -274,6 +274,53 @@ squares = {x**2 for x in range(5)}
 print(squares)  # Output: {0, 1, 4, 9, 16}
 ```
 
+**How can I check if an element is in a set?**
+
+To check whether an element exists in a set, you can use the **`in`** keyword in Python. This is a fast and efficient operation due to the hash-based structure of sets.
+
+```
+my_set = {1, 2, 3, 4, 5}
+
+# Check if 3 is in the set
+print(3 in my_set)  # Output: True
+
+# Check if 10 is in the set
+print(10 in my_set)  # Output: False
+```
+
+```
+my_set = {1, 2, 3, 4, 5}
+
+# Check if 6 is not in the set
+print(6 not in my_set)  # Output: True
+
+# Check if 2 is not in the set
+print(2 not in my_set)  # Output: False
+```
+
+Key Points:
+
+* **Efficiency**: Membership checks (`in` or `not in`) for sets are very fast because sets are implemented as hash tables.
+* **Immutable Elements Only**: Remember, set elements must be immutable (e.g., numbers, strings, tuples). If you try to check for a mutable object like a list, it will raise an error.
+
+Example of an error with mutable types:
+
+```
+my_set = {1, 2, 3}
+# print([1, 2] in my_set)  # Raises TypeError: unhashable type: 'list'
+```
+
+For checking if an immutable tuple exists:
+
+```
+my_set = {(1, 2), (3, 4), (5, 6)}
+print((1, 2) in my_set)  # Output: True
+print((7, 8) in my_set)  # Output: False
+
+```
+
+
+
 <figure><img src=".gitbook/assets/Python-Set-Methods-Cheat-Sheet.png" alt=""><figcaption></figcaption></figure>
 
 
